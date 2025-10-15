@@ -56,8 +56,8 @@ const Skills: React.FC = () => {
         { name: "Node.js", level: 85, icon: FaNode, color: "#339933" },
         { name: "Python", level: 80, icon: FaPython, color: "#3776AB" },
         { name: "Express.js", level: 85, icon: SiExpress, color: "#000000" },
-        { name: "MongoDB", level: 75, icon: SiMongodb, color: "#47A248" },
-        { name: "PostgreSQL", level: 70, icon: SiPostgresql, color: "#336791" }
+        { name: "PostgreSQL", level: 80, icon: SiPostgresql, color: "#336791" },
+        { name: "MongoDB", level: 70, icon: SiMongodb, color: "#47A248" }
       ]
     },
     {
@@ -202,9 +202,8 @@ const Skills: React.FC = () => {
           </Heading>
           <Flex wrap="wrap" justify="center" gap={3}>
             {[
-              'Redux', 'GraphQL', 'Firebase', 'Jest', 'Cypress', 'Webpack', 
-              'Vite', 'SASS', 'Material-UI', 'Ant Design', 'Prisma', 'Vercel',
-              'Stripe', 'Socket.io', 'REST APIs', 'GraphQL', 'Microservices'
+              'Redux', 'GraphQL', 'Firebase', 'SASS', 'Material-UI', 'Ant Design', 'Clerk',
+              'IntaSend', 'Socket.io', 'REST APIs', 'MySQL','Microservices'
             ].map((tech, index) => (
               <MotionBox
                 key={tech}

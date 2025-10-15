@@ -54,8 +54,8 @@ const About: React.FC = () => {
             as="h2"
             size="2xl"
             mb={4}
-            bgGradient="linear(to-r, #8b5cf6, purple.500)"
-            bgClip="text"
+            color="#8b5cf6"
+            
           >
             About Me
           </Heading>
@@ -123,7 +123,7 @@ const About: React.FC = () => {
           >
             <VStack align="start" gap={6}>
               <Heading as="h3" size="lg" mb={6}>
-                I'm Sandra, a passionate Full Stack Developer
+                I'm Sandra Nyambura, a passionate Full Stack Developer
               </Heading>
               
               <VStack align="start" gap={4} color="gray.600">

@@ -42,12 +42,12 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
+      title: "RuNfts Marketplace",
+      description: "A platform used to discover rare digital art, collect and sell extraordinaryNFTs",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      technologies: ["React", "Tailwind CSS"],
+      liveUrl: "https://runfts.netlify.app/",
+      githubUrl: "https://github.com/NyamburaSandra/RuNft-marketplace",
       category: "web",
       featured: true
     },
@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
       technologies: ["React Native", "Firebase", "TypeScript"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
-      category: "mobile"
+      category: "web"
     },
     {
       id: 3,

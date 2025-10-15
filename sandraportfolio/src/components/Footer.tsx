@@ -55,13 +55,13 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <Box as="footer" bg="gray.900" color="white" py={12} ml={0} mr={0} pl={{ base: 4, md: 12 }}>
+  <Box as="footer" bg="gray.900" color="white" py={12} ml={0} mr={0} pl={{ base: 4, md: 12 }}>
       <Container maxW="6xl">
         <VStack gap={12}>
           {/* Main Footer Content */}
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={8} w="full">
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={{ base: 10, md: 14, lg: 20 }} w="full">
             {/* Brand Section */}
-            <VStack align="start" gap={4}>
+            <VStack align="start" gap={{ base: 8, md: 10, lg: 12 }}>
               <Heading size="lg" color="white">
                 Sandra<Text as="span" color="#8b5cf6">.</Text>
               </Heading>
