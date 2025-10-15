@@ -1,8 +1,8 @@
 [build]
   base = "sandraportfolio"
   command = "npm run build"
-  publish = "sandraportfolio/dist"
-  functions = "sandraportfolio/netlify/functions"
+  publish = "dist"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"
