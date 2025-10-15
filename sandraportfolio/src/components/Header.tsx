@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import {
   Box,
   Flex,
-  Text,
   IconButton,
   Button,
   Stack,
   Link,
 } from '@chakra-ui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Logo from './Logo';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,13 +71,7 @@ const Header: React.FC = () => {
         
         {/* Logo */}
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            fontSize="2xl"
-            fontWeight="bold"
-            color="gray.900"
-          >
-            Sandra<Text as="span" color="blue.600">.</Text>
-          </Text>
+          <Logo />
         </Flex>
 
         {/* Desktop Navigation */}
@@ -93,7 +87,7 @@ const Header: React.FC = () => {
               key={item.name}
               href={item.href}
               color="gray.700"
-              _hover={{ color: 'blue.600' }}
+              _hover={{ color: '#8b5cf6' }}
               transition="colors 0.2s"
               fontWeight="medium"
             >
@@ -101,12 +95,12 @@ const Header: React.FC = () => {
             </Link>
           ))}
           <Button
-            bg="blue.600"
+            bg="#8b5cf6"
             color="white"
             px={6}
             py={2}
             rounded="lg"
-            _hover={{ bg: 'blue.700' }}
+            _hover={{ bg: '#8b5cf6' }}
             transition="colors 0.2s"
             fontWeight="medium"
           >
@@ -128,7 +122,7 @@ const Header: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 color="gray.700"
-                _hover={{ color: 'blue.600' }}
+                _hover={{ color: '#8b5cf6' }}
                 transition="colors 0.2s"
                 fontWeight="medium"
                 onClick={() => setIsOpen(false)}
@@ -137,12 +131,12 @@ const Header: React.FC = () => {
               </Link>
             ))}
             <Button
-              bg="blue.600"
+              bg="#8b5cf6"
               color="white"
               px={6}
               py={2}
               rounded="lg"
-              _hover={{ bg: 'blue.700' }}
+              _hover={{ bg: '#8b5cf6' }}
               transition="colors 0.2s"
               fontWeight="medium"
               mt={4}

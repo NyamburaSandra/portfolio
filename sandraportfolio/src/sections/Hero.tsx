@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Heading,
@@ -14,12 +14,30 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa';
 
 const MotionBox = motion(Box);
+const MotionHeading = motion(Heading);
+
+function useTypewriter(text: string, speed: number = 80) {
+  const [displayed, setDisplayed] = useState('');
+  useEffect(() => {
+    let i = 0;
+    setDisplayed('');
+    const interval = setInterval(() => {
+      setDisplayed(text.slice(0, i + 1));
+      i++;
+      if (i > text.length) clearInterval(interval);
+    }, speed);
+    return () => clearInterval(interval);
+  }, [text, speed]);
+  return displayed.length ? displayed : text;
+}
 
 const Hero: React.FC = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     aboutSection?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const typedName = useTypewriter('Sandra Nyambura', 80);
 
   return (
     <Box
@@ -29,7 +47,7 @@ const Hero: React.FC = () => {
       alignItems="center"
       justifyContent="center"
       bgGradient="linear(to-br, gray.50, gray.100)"
-      pt={16}
+      pt={{ base: 24, md: 32 }}
     >
       <Container maxW="6xl">
         <VStack gap={8} textAlign="center">
@@ -39,20 +57,21 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Text color="blue.600" fontWeight="medium" fontSize="lg" mb={4}>
-              Hello, I'm
+            <Text color="#8b5cf6" fontWeight="medium" fontSize="lg" mb={4}>
+              Hello, I'm 
             </Text>
-            <Heading
+            <MotionHeading
               as="h1"
-              size="4xl"
-              fontWeight="bold"
-              color="gray.900"
+              size="3xl"
+              fontWeight="medium"
+              color="#8b5cf6"
               mb={6}
-              bgGradient="linear(to-r, blue.600, purple.600)"
-              bgClip="text"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Sandra Nyambura
-            </Heading>
+              {typedName}
+            </MotionHeading><br />
             <Heading
               as="h2"
               size="xl"
@@ -123,7 +142,7 @@ const Hero: React.FC = () => {
                 href="#"
                 aria-label="GitHub"
                 color="gray.700"
-                _hover={{ color: 'blue.600', transform: 'translateY(-2px)' }}
+                _hover={{ color: '#8b5cf6', transform: 'translateY(-2px)' }}
                 transition="all 0.2s"
                 p={3}
                 bg="white"
@@ -139,7 +158,7 @@ const Hero: React.FC = () => {
                 href="#"
                 aria-label="LinkedIn"
                 color="gray.700"
-                _hover={{ color: 'blue.600', transform: 'translateY(-2px)' }}
+                _hover={{ color: '#8b5cf6', transform: 'translateY(-2px)' }}
                 transition="all 0.2s"
                 p={3}
                 bg="white"
@@ -155,7 +174,7 @@ const Hero: React.FC = () => {
                 href="#"
                 aria-label="Email"
                 color="gray.700"
-                _hover={{ color: 'blue.600', transform: 'translateY(-2px)' }}
+                _hover={{ color: '#8b5cf6', transform: 'translateY(-2px)' }}
                 transition="all 0.2s"
                 p={3}
                 bg="white"
@@ -177,44 +196,6 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             mt={16}
           >
-            <Box
-              w="64"
-              h="64"
-              bgGradient="linear(to-br, blue.400, blue.600)"
-              rounded="full"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              shadow="2xl"
-              mx="auto"
-            >
-              <Box
-                w="56"
-                h="56"
-                bg="gray.200"
-                rounded="full"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Text fontSize="6xl">👋</Text>
-              </Box>
-            </Box>
-          </MotionBox>
-
-          {/* Scroll Indicator */}
-          <MotionBox
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            position="absolute"
-            bottom={8}
-            left="50%"
-            transform="translateX(-50%)"
-          >
-            <Box className="animate-bounce">
-              <FaArrowDown color="gray.400" />
-            </Box>
           </MotionBox>
         </VStack>
       </Container>

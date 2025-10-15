@@ -248,8 +248,8 @@ const Projects: React.FC = () => {
               key={tech}
               px={3}
               py={1}
-              bg="blue.50"
-              color="blue.700"
+              bg="#ede9fe"
+              color="#8b5cf6"
               fontSize="xs"
               fontWeight="medium"
               rounded="full"
@@ -303,7 +303,7 @@ const Projects: React.FC = () => {
   );
 
   return (
-    <Box id="projects" py={20} bg="white">
+    <Box id="projects" py={20} bg="white" ml={{ base: 4, md: 12 }} mr={{ base: 4, md: 12 }}>
       <Container maxW="6xl">
         <VStack gap={16}>
           {/* Section Header */}
@@ -315,7 +315,7 @@ const Projects: React.FC = () => {
               viewport={{ once: true }}
             >
               <Heading size="2xl" color="gray.900">
-                Featured <Text as="span" color="blue.500">Projects</Text>
+                Featured <Text as="span" color="#8b5cf6">Projects</Text>
               </Heading>
             </MotionBox>
             <MotionBox
@@ -380,7 +380,7 @@ const Projects: React.FC = () => {
               colorScheme="blue"
               rounded="full"
               px={8}
-              _hover={{ bg: "blue.50" }}
+              _hover={{ bg: "#ede9fe" }}
             >
               View More Projects
             </Button>

@@ -109,7 +109,7 @@ const Skills: React.FC = () => {
       >
         <Box
           h="full"
-          bg="blue.500"
+          bg="#8b5cf6"
           rounded="full"
           w={`${skill.level}%`}
           css={{ transition: "width 0.8s ease-in-out" }}
@@ -119,7 +119,7 @@ const Skills: React.FC = () => {
   );
 
   return (
-    <Box id="skills" py={20} bg="gray.50">
+    <Box id="skills" py={20} bg="gray.50" ml={{ base: 4, md: 12 }} mr={{ base: 4, md: 12 }}>
       <Container maxW="6xl">
         {/* Section Header */}
         <MotionBox
@@ -134,7 +134,7 @@ const Skills: React.FC = () => {
             as="h2"
             size="2xl"
             mb={4}
-            bgGradient="linear(to-r, blue.400, purple.500)"
+            bgGradient="linear(to-r, #8b5cf6, purple.500)"
             bgClip="text"
           >
             Skills & Expertise
@@ -216,11 +216,11 @@ const Skills: React.FC = () => {
                 <Badge
                   px={4}
                   py={2}
-                  bg="blue.50"
-                  color="blue.700"
+                  bg="#ede9fe"
+                  color="#8b5cf6"
                   rounded="full"
                   fontWeight="medium"
-                  _hover={{ bg: "blue.100", transform: "scale(1.05)" }}
+                  _hover={{ bg: "#ede9fe", transform: "scale(1.05)" }}
                   cursor="pointer"
                   transition="all 0.2s"
                 >

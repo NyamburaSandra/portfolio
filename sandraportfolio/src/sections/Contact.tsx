@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
       icon: FaEnvelope,
       label: 'Email',
       value: 'sandra@example.com',
-      color: 'blue.500'
+  color: '#8b5cf6'
     },
     {
       icon: FaClock,
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <Box id="contact" py={20} bg="gray.50">
+    <Box id="contact" py={20} bg="gray.50" ml={{ base: 4, md: 12 }} mr={{ base: 4, md: 12 }} pl={{ base: 4, md: 12 }}>
       <Container maxW="6xl">
         <VStack gap={16}>
           {/* Section Header */}
@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
               viewport={{ once: true }}
             >
               <Heading size="2xl" color="gray.900">
-                Get in <Text as="span" color="blue.500">Touch</Text>
+                Get in <Text as="span" color="#8b5cf6">Touch</Text>
               </Heading>
             </MotionBox>
             <MotionBox
@@ -214,7 +214,7 @@ const Contact: React.FC = () => {
                           border="1px"
                           borderColor="gray.200"
                           _focus={{ 
-                            borderColor: "blue.500", 
+                            borderColor: "#8b5cf6", 
                             bg: "white",
                             shadow: "md"
                           }}
@@ -237,7 +237,7 @@ const Contact: React.FC = () => {
                           border="1px"
                           borderColor="gray.200"
                           _focus={{ 
-                            borderColor: "blue.500", 
+                            borderColor: "#8b5cf6", 
                             bg: "white",
                             shadow: "md"
                           }}
@@ -262,7 +262,7 @@ const Contact: React.FC = () => {
                         border="1px"
                         borderColor="gray.200"
                         _focus={{ 
-                          borderColor: "blue.500", 
+                          borderColor: "#8b5cf6", 
                           bg: "white",
                           shadow: "md"
                         }}
@@ -287,7 +287,7 @@ const Contact: React.FC = () => {
                         border="1px"
                         borderColor="gray.200"
                         _focus={{ 
-                          borderColor: "blue.500", 
+                          borderColor: "#8b5cf6", 
                           bg: "white",
                           shadow: "md"
                         }}
@@ -386,12 +386,12 @@ const Contact: React.FC = () => {
                     </Heading>
                     <VStack gap={3} align="start" w="full">
                       <HStack>
-                        <Icon as={FaEnvelope} color="blue.500" />
+                        <Icon as={FaEnvelope} color="#8b5cf6" />
                         <a
                           href="mailto:sandra@example.com"
                           style={{ textDecoration: 'none' }}
                         >
-                          <Text color="blue.600" _hover={{ textDecoration: "underline" }}>
+                          <Text color="#8b5cf6" _hover={{ textDecoration: "underline" }}>
                             sandra@example.com
                           </Text>
                         </a>
@@ -414,20 +414,20 @@ const Contact: React.FC = () => {
 
                 {/* Response Time */}
                 <Box
-                  bg="blue.50"
+                  bg="#ede9fe"
                   p={4}
                   rounded="lg"
                   border="1px"
-                  borderColor="blue.200"
+                  borderColor="#c4b5fd"
                   w="full"
                 >
                   <HStack gap={3}>
-                    <Icon as={FaClock} color="blue.500" />
+                    <Icon as={FaClock} color="#8b5cf6" />
                     <VStack gap={1} align="start">
-                      <Text fontWeight="semibold" color="blue.900" fontSize="sm">
+                      <Text fontWeight="semibold" color="#8b5cf6" fontSize="sm">
                         Quick Response Time
                       </Text>
-                      <Text color="blue.700" fontSize="sm">
+                      <Text color="#8b5cf6" fontSize="sm">
                         I typically respond within 24 hours
                       </Text>
                     </VStack>

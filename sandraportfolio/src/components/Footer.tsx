@@ -17,7 +17,6 @@ import {
   FaTwitter, 
   FaEnvelope, 
   FaInstagram,
-  FaDribbble,
   FaArrowUp,
   FaHeart,
   FaCode,
@@ -33,9 +32,9 @@ const Footer: React.FC = () => {
     { icon: FaGithub, href: 'https://github.com', color: '#333', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://linkedin.com', color: '#0077B5', label: 'LinkedIn' },
     { icon: FaTwitter, href: 'https://twitter.com', color: '#1DA1F2', label: 'Twitter' },
-    { icon: FaEnvelope, href: 'mailto:sandra@example.com', color: '#EA4335', label: 'Email' },
+    { icon: FaEnvelope, href: 'mailto:sandranyambura62@mail.com', color: '#EA4335', label: 'Email' },
     { icon: FaInstagram, href: 'https://instagram.com', color: '#E4405F', label: 'Instagram' },
-    { icon: FaDribbble, href: 'https://dribbble.com', color: '#EA4C89', label: 'Dribbble' },
+    
   ];
 
   const services = [
@@ -56,7 +55,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <Box as="footer" bg="gray.900" color="white" py={16}>
+    <Box as="footer" bg="gray.900" color="white" py={12} ml={0} mr={0} pl={{ base: 4, md: 12 }}>
       <Container maxW="6xl">
         <VStack gap={12}>
           {/* Main Footer Content */}
@@ -64,7 +63,7 @@ const Footer: React.FC = () => {
             {/* Brand Section */}
             <VStack align="start" gap={4}>
               <Heading size="lg" color="white">
-                Sandra<Text as="span" color="blue.400">.</Text>
+                Sandra<Text as="span" color="#8b5cf6">.</Text>
               </Heading>
               <Text color="gray.300" fontSize="sm" lineHeight="tall">
                 A passionate full-stack developer and designer creating 
@@ -110,7 +109,7 @@ const Footer: React.FC = () => {
                     key={index}
                     color="gray.300"
                     fontSize="sm"
-                    _hover={{ color: "blue.400" }}
+                    _hover={{ color: "#8b5cf6" }}
                     css={{ transition: "color 0.2s" }}
                     cursor="pointer"
                   >
@@ -135,7 +134,7 @@ const Footer: React.FC = () => {
                     <Text
                       color="gray.300"
                       fontSize="sm"
-                      _hover={{ color: "blue.400" }}
+                      _hover={{ color: "#8b5cf6" }}
                       css={{ transition: "color 0.2s" }}
                     >
                       {link.label}
@@ -159,8 +158,8 @@ const Footer: React.FC = () => {
                     href="mailto:sandra@example.com"
                     style={{ textDecoration: 'none' }}
                   >
-                    <Text color="gray.300" fontSize="sm" _hover={{ color: "blue.400" }}>
-                      sandra@example.com
+                    <Text color="gray.300" fontSize="sm" _hover={{ color: "#8b5cf6" }}>
+                      sandranyambura62@gmail.com
                     </Text>
                   </a>
                 </VStack>
@@ -210,7 +209,7 @@ const Footer: React.FC = () => {
                 variant="ghost"
                 size="sm"
                 color="gray.400"
-                _hover={{ color: "blue.400", transform: "translateY(-2px)" }}
+                _hover={{ color: "#8b5cf6", transform: "translateY(-2px)" }}
                 css={{ transition: "all 0.2s" }}
               >
                 <HStack gap={1}>

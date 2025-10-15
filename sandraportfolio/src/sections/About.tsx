@@ -39,7 +39,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <Box id="about" py={20} bg="white">
+    <Box id="about" ml={{ base: 4, md: 12 }} mr={{ base: 4, md: 12 }} py={20} bg="white">
       <Container maxW="6xl">
         {/* Section Header */}
         <MotionBox
@@ -54,7 +54,7 @@ const About: React.FC = () => {
             as="h2"
             size="2xl"
             mb={4}
-            bgGradient="linear(to-r, blue.400, purple.500)"
+            bgGradient="linear(to-r, #8b5cf6, purple.500)"
             bgClip="text"
           >
             About Me
@@ -78,7 +78,7 @@ const About: React.FC = () => {
                 w="full"
                 maxW="md"
                 mx="auto"
-                bgGradient="linear(to-br, blue.100, blue.200)"
+                bgGradient="linear(to-br, #8b5cf6, #c4b5fd)"
                 rounded="2xl"
                 p={8}
                 mb={8}
@@ -99,13 +99,13 @@ const About: React.FC = () => {
               {/* Stats */}
               <SimpleGrid columns={2} gap={4} w="full">
                 <Box textAlign="center" p={4} bg="gray.50" rounded="lg">
-                  <Text fontSize="2xl" fontWeight="bold" color="blue.600">
+                  <Text fontSize="2xl" fontWeight="bold" color="#8b5cf6">
                     3+
                   </Text>
                   <Text color="gray.600">Years Experience</Text>
                 </Box>
                 <Box textAlign="center" p={4} bg="gray.50" rounded="lg">
-                  <Text fontSize="2xl" fontWeight="bold" color="blue.600">
+                  <Text fontSize="2xl" fontWeight="bold" color="#8b5cf6">
                     20+
                   </Text>
                   <Text color="gray.600">Projects Completed</Text>
@@ -148,12 +148,12 @@ const About: React.FC = () => {
               </VStack>
 
               <Button
-                bg="blue.600"
+                bg="#8b5cf6"
                 color="white"
                 px={6}
                 py={3}
                 rounded="lg"
-                _hover={{ bg: "blue.700" }}
+                _hover={{ bg: "#8b5cf6" }}
                 transition="all 0.2s"
                 fontWeight="medium"
               >
@@ -190,8 +190,8 @@ const About: React.FC = () => {
                   <Box
                     display="inline-flex"
                     p={3}
-                    bg="blue.100"
-                    color="blue.600"
+                    bg="#ede9fe"
+                    color="#8b5cf6"
                     rounded="lg"
                     mb={4}
                   >
