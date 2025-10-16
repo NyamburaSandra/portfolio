@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Nfts from '../assets/Nfts.png';
+import Portfolio from '../assets/Portfolio.png';
+import Edufam from '../assets/Edufam.png';
 import {
   Box,
   Container,
@@ -44,28 +47,28 @@ const Projects: React.FC = () => {
       id: 1,
       title: "RuNfts Marketplace",
       description: "A platform used to discover rare digital art, collect and sell extraordinaryNFTs",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      image: Nfts,
       technologies: ["React", "Tailwind CSS"],
       liveUrl: "https://runfts.netlify.app/",
       githubUrl: "https://github.com/NyamburaSandra/RuNft-marketplace",
       category: "web",
-      featured: true
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application built with React Native and Firebase. Real-time updates and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      technologies: ["React Native", "Firebase", "TypeScript"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "web"
+      title: "Parent Teacher Communication",
+      description: "An education system with real-time updates to alert the parent concerning their child's performance,attendance and fees.",
+      image: Edufam,
+      technologies: ["React", "TypeScript","Bulk SMS","Django", "Docker"],
+      liveUrl: "https://edufam.netlify.app/",
+      githubUrl: "https://github.com/NyamburaSandra/Edufam",
+      category: "web",
+      featured: true
     },
     {
       id: 3,
       title: "Portfolio Website",
       description: "A responsive portfolio website showcasing modern web design principles and smooth animations. Built with React and Framer Motion.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      image: Portfolio,
       technologies: ["React", "TypeScript", "Framer Motion", "Chakra UI"],
       liveUrl: "https://sandranyambura.netlify.app/",
       githubUrl: "https://github.com/NyamburaSandra/portfolio",
@@ -73,7 +76,7 @@ const Projects: React.FC = () => {
     },
     {
       id: 4,
-      title: "Brand Identity Design",
+      title: "E movie",
       description: "Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup.",
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
       technologies: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],

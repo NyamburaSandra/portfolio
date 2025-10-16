@@ -128,14 +128,14 @@ const About: React.FC = () => {
               
               <VStack align="start" gap={4} color="gray.600">
                 <Text>
-                  With over 3 years of experience in web development, I specialize in creating 
+                  With over 2 years of experience in web development, I specialize in creating 
                   modern, responsive applications using cutting-edge technologies. My journey 
                   started with a curiosity about how websites work, and it has evolved into a 
                   deep passion for crafting digital solutions.
                 </Text>
                 
                 <Text>
-                  I believe that great software is not just about code—it's about understanding 
+                  I believe that great software is not just about code, it's about understanding 
                   user needs, solving real problems, and creating experiences that matter. When 
                   I'm not coding, you'll find me exploring new technologies, contributing to 
                   open-source projects, or mentoring aspiring developers.
@@ -157,7 +157,7 @@ const About: React.FC = () => {
                 transition="all 0.2s"
                 fontWeight="medium"
               >
-                Download My Resume
+                Download Resume
               </Button>
             </VStack>
           </MotionBox>
