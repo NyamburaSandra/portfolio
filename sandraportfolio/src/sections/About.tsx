@@ -12,8 +12,7 @@ import {
 import { motion } from 'framer-motion';
 import { FaCode, FaPalette, FaLightbulb, FaHeart } from 'react-icons/fa';
 
-// Import resume so Vite bundles it and we can link to it for download
-import resumePdf from '../assets/SandraNyambura Resume.pdf';
+// Resume download temporarily disabled — removed import to avoid unused symbol
 
 const MotionBox = motion(Box);
 
@@ -103,16 +102,16 @@ const About: React.FC = () => {
               <SimpleGrid columns={2} gap={4} w="full">
                 <Box textAlign="center" p={4} bg="gray.50" rounded="lg">
                   <Text fontSize="2xl" fontWeight="bold" color="#8b5cf6">
-                    3+
+                    2+
                   </Text>
                   <Text color="gray.600">Years Experience</Text>
                 </Box>
-                <Box textAlign="center" p={4} bg="gray.50" rounded="lg">
+                {/* <Box textAlign="center" p={4} bg="gray.50" rounded="lg">
                   <Text fontSize="2xl" fontWeight="bold" color="#8b5cf6">
                     20+
                   </Text>
                   <Text color="gray.600">Projects Completed</Text>
-                </Box>
+                </Box> */}
               </SimpleGrid>
             </VStack>
           </MotionBox>
@@ -136,34 +135,32 @@ const About: React.FC = () => {
                   started with a curiosity about how websites work, and it has evolved into a 
                   deep passion for crafting digital solutions.
                 </Text>
-                
+
                 <Text>
                   I believe that great software is not just about code, it's about understanding 
                   user needs, solving real problems, and creating experiences that matter. When 
                   I'm not coding, you'll find me exploring new technologies, contributing to 
                   open-source projects, or mentoring aspiring developers.
                 </Text>
-                
+
                 <Text>
                   I'm always excited to take on new challenges and collaborate with teams that 
                   share my passion for innovation and excellence.
                 </Text>
               </VStack>
 
-              <a href={resumePdf} download style={{ textDecoration: 'none' }}>
-                <Button
-                  bg="#8b5cf6"
-                  color="white"
-                  px={6}
-                  py={3}
-                  rounded="lg"
-                  _hover={{ bg: "#8b5cf6" }}
-                  transition="all 0.2s"
-                  fontWeight="medium"
-                >
-                  Download My Resume
-                </Button>
-              </a>
+              <Button
+                          bg="#8b5cf6"
+                          color="white"
+                          px={6}
+                          py={2}
+                          rounded="lg"
+                          _hover={{ bg: '#8b5cf6' }}
+                          transition="colors 0.2s"
+                          fontWeight="medium"
+                        >
+                          Download Resume
+                        </Button>
             </VStack>
           </MotionBox>
         </SimpleGrid>
