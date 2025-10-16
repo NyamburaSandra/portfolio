@@ -45,16 +45,6 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "RuNfts Marketplace",
-      description: "A platform used to discover rare digital art, collect and sell extraordinaryNFTs",
-      image: Nfts,
-      technologies: ["React", "Tailwind CSS"],
-      liveUrl: "https://runfts.netlify.app/",
-      githubUrl: "https://github.com/NyamburaSandra/RuNft-marketplace",
-      category: "web",
-    },
-    {
-      id: 2,
       title: "Parent Teacher Communication",
       description: "An education system with real-time updates to alert the parent concerning their child's performance,attendance and fees.",
       image: Edufam,
@@ -65,7 +55,7 @@ const Projects: React.FC = () => {
       featured: true
     },
     {
-      id: 3,
+      id: 2,
       title: "Portfolio Website",
       description: "A responsive portfolio website showcasing modern web design principles and smooth animations. Built with React and Framer Motion.",
       image: Portfolio,
@@ -73,6 +63,16 @@ const Projects: React.FC = () => {
       liveUrl: "https://sandranyambura.netlify.app/",
       githubUrl: "https://github.com/NyamburaSandra/portfolio",
       category: "web"
+    },
+    {
+      id: 3,
+      title: "RuNfts Marketplace",
+      description: "A platform used to discover rare digital art, collect and sell extraordinaryNFTs",
+      image: Nfts,
+      technologies: ["React", "Tailwind CSS"],
+      liveUrl: "https://runfts.netlify.app/",
+      githubUrl: "https://github.com/NyamburaSandra/RuNft-marketplace",
+      category: "web",
     },
     {
       id: 4,
