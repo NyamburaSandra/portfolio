@@ -46,7 +46,8 @@ const Skills: React.FC = () => {
         { name: "JavaScript", level: 95, icon: FaJs, color: "#F7DF1E" },
         { name: "HTML5", level: 95, icon: FaHtml5, color: "#E34F26" },
         { name: "CSS3", level: 90, icon: FaCss3Alt, color: "#1572B6" },
-        { name: "Next.js", level: 80, icon: SiNextdotjs, color: "#000000" }
+        { name: "Next.js", level: 80, icon: SiNextdotjs, color: "#000000" },
+        { name: "Tailwind CSS", level: 90, icon: SiTailwindcss, color: "#06B6D4" }
       ]
     },
     {
@@ -67,54 +68,43 @@ const Skills: React.FC = () => {
         { name: "Git/GitHub", level: 90, icon: FaGitAlt, color: "#F05032" },
         { name: "Docker", level: 70, icon: FaDocker, color: "#2496ED" },
         { name: "AWS", level: 65, icon: FaAws, color: "#232F3E" },
-        { name: "Figma", level: 85, icon: FaFigma, color: "#F24E1E" },
-        { name: "Tailwind CSS", level: 90, icon: SiTailwindcss, color: "#06B6D4" }
+        { name: "Figma", level: 85, icon: FaFigma, color: "#F24E1E" }
+        
       ]
     }
   ];
 
   type Skill = {
     name: string;
-    level: number;
+    level?: number;
     icon: React.ElementType;
     color: string;
   };
 
-  const SkillBar = ({ skill, index }: { skill: Skill, index: number }) => (
+  const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => (
     <MotionBox
-      initial={{ opacity: 0, x: -30 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      initial={{ opacity: 0, y: 8, scale: 0.97 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.45, delay: index * 0.06 }}
       viewport={{ once: true }}
-      mb={6}
     >
-      <HStack justify="space-between" mb={2}>
-        <HStack gap={3}>
-          <Icon as={skill.icon} color={skill.color} boxSize={5} />
-          <Text fontWeight="medium" color="gray.700">
-            {skill.name}
-          </Text>
-        </HStack>
-        <Badge colorScheme="blue" variant="subtle">
-          {skill.level}%
-        </Badge>
-      </HStack>
-      {/* Custom Progress Bar */}
-      <Box
-        w="full"
-        h="8px"
-        bg="gray.100"
-        rounded="full"
-        overflow="hidden"
+      <Flex
+        direction="column"
+        align="center"
+        justify="center"
+        p={3}
+        bg="gray.50"
+        rounded="md"
+        border="1px"
+        borderColor="gray.100"
+        minW="80px"
+        minH="72px"
       >
-        <Box
-          h="full"
-          bg="#8b5cf6"
-          rounded="full"
-          w={`${skill.level}%`}
-          css={{ transition: "width 0.8s ease-in-out" }}
-        />
-      </Box>
+        <Icon as={skill.icon} boxSize={6} color={skill.color} mb={2} />
+        <Text fontSize="sm" fontWeight="semibold" color="gray.700">
+          {skill.name}
+        </Text>
+      </Flex>
     </MotionBox>
   );
 
@@ -175,15 +165,11 @@ const Skills: React.FC = () => {
                   </Heading>
                 </HStack>
                 
-                <VStack align="stretch" w="full">
+                <SimpleGrid columns={{ base: 2, md: 3 }} gap={4} w="full">
                   {category.skills.map((skill, skillIndex) => (
-                    <SkillBar 
-                      key={skill.name} 
-                      skill={skill} 
-                      index={skillIndex} 
-                    />
+                    <SkillCard key={skill.name} skill={skill} index={skillIndex} />
                   ))}
-                </VStack>
+                </SimpleGrid>
               </VStack>
             </MotionBox>
           ))}
@@ -202,7 +188,7 @@ const Skills: React.FC = () => {
           </Heading>
           <Flex wrap="wrap" justify="center" gap={3}>
             {[
-              'Redux', 'GraphQL', 'Firebase', 'SASS', 'Material-UI', 'Ant Design', 'Clerk',
+              'Redux', 'Firebase', 'SASS', 'Material-UI', 'Ant Design', 'Clerk',
               'IntaSend', 'Socket.io', 'REST APIs', 'MySQL','Microservices'
             ].map((tech, index) => (
               <MotionBox

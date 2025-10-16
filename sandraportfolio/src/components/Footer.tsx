@@ -11,6 +11,7 @@ import {
   Button,
   Flex,
 } from '@chakra-ui/react';
+import Logo from './Logo';
 import { 
   FaGithub, 
   FaLinkedin, 
@@ -19,7 +20,6 @@ import {
   FaInstagram,
   FaArrowUp,
   FaHeart,
-  FaCode,
   FaCoffee
 } from 'react-icons/fa';
 
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
     { icon: FaGithub, href: 'https://github.com', color: '#333', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://linkedin.com', color: '#0077B5', label: 'LinkedIn' },
     { icon: FaTwitter, href: 'https://twitter.com', color: '#1DA1F2', label: 'Twitter' },
-    { icon: FaEnvelope, href: 'mailto:sandranyambura62@mail.com', color: '#EA4335', label: 'Email' },
+    { icon: FaEnvelope, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=sandranyambura62@gmail.com', color: '#EA4335', label: 'Email' },
     { icon: FaInstagram, href: 'https://instagram.com', color: '#E4405F', label: 'Instagram' },
     
   ];
@@ -62,9 +62,7 @@ const Footer: React.FC = () => {
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={{ base: 10, md: 14, lg: 20 }} w="full">
             {/* Brand Section */}
             <VStack align="start" gap={{ base: 8, md: 10, lg: 12 }}>
-              <Heading size="lg" color="white">
-                Sandra<Text as="span" color="#8b5cf6">.</Text>
-              </Heading>
+              <Logo />
               <Text color="gray.300" fontSize="sm" lineHeight="tall">
                 A passionate full-stack developer and designer creating 
                 meaningful digital experiences that make a difference.
@@ -155,7 +153,16 @@ const Footer: React.FC = () => {
                     Email
                   </Text>
                   <a
-                    href="mailto:sandra@example.com"
+                    href="#"
+                    onClick={(ev) => {
+                      ev.preventDefault();
+                      const gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=sandranyambura62@gmail.com';
+                      const opened = window.open(gmailLink, '_blank');
+                      if (!opened) {
+                        // fallback to mailto
+                        window.location.href = 'mailto:sandranyambura62@gmail.com';
+                      }
+                    }}
                     style={{ textDecoration: 'none' }}
                   >
                     <Text color="gray.300" fontSize="sm" _hover={{ color: "#8b5cf6" }}>
@@ -168,7 +175,7 @@ const Footer: React.FC = () => {
                     Phone
                   </Text>
                   <Text color="gray.300" fontSize="sm">
-                    +254 123 456 789
+                    +254 715 576 095
                   </Text>
                 </VStack>
                 <VStack align="start" gap={1}>
@@ -220,11 +227,6 @@ const Footer: React.FC = () => {
             </HStack>
           </Flex>
 
-          {/* Tech Stack Credits */}
-          <HStack gap={2} color="gray.500" fontSize="xs" textAlign="center">
-            <Icon as={FaCode} />
-            <Text>Built with React, TypeScript, Chakra UI & Framer Motion</Text>
-          </HStack>
         </VStack>
       </Container>
     </Box>

@@ -23,8 +23,6 @@ import {
   FaLinkedin,
   FaGithub,
   FaInstagram,
-  FaDribbble,
-  FaBehance,
   FaClock,
   FaGlobe
 } from 'react-icons/fa';
@@ -49,8 +47,32 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    // Build subject and body for email
+    const subject = formData.subject || 'Website contact form';
+    const bodyLines = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      '',
+      formData.message || '',
+    ];
+    const body = bodyLines.join('\n');
+
+    // Gmail compose URL (opens Gmail web compose with prefilled fields)
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=sandranyambura62@gmail.com&su=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    // Try to open Gmail in a new tab; if popup blocked, fallback to mailto
+    const opened = window.open(gmailUrl, '_blank');
+    if (!opened) {
+      // Fallback to mailto (will open default mail client)
+      window.location.href = `mailto:sandranyambura62@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+    }
+
+    // Optionally reset the form
+    setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
   const contactInfo = [
@@ -63,13 +85,13 @@ const Contact: React.FC = () => {
     {
       icon: FaPhone,
       label: 'Phone',
-      value: '+254 123 456 789',
+      value: '+254 715 576 095',
       color: 'green.500'
     },
     {
       icon: FaEnvelope,
       label: 'Email',
-      value: 'sandra@example.com',
+      value: 'sandranyambura62@gmail.com',
   color: '#8b5cf6'
     },
     {
@@ -85,8 +107,6 @@ const Contact: React.FC = () => {
     { icon: FaLinkedin, href: 'https://linkedin.com', color: '#0077B5', label: 'LinkedIn' },
     { icon: FaTwitter, href: 'https://twitter.com', color: '#1DA1F2', label: 'Twitter' },
     { icon: FaInstagram, href: 'https://instagram.com', color: '#E4405F', label: 'Instagram' },
-    { icon: FaDribbble, href: 'https://dribbble.com', color: '#EA4C89', label: 'Dribbble' },
-    { icon: FaBehance, href: 'https://behance.net', color: '#1769FF', label: 'Behance' },
   ];
 
   return (
@@ -157,9 +177,28 @@ const Contact: React.FC = () => {
                       <Text fontWeight="semibold" color="gray.900">
                         {info.label}
                       </Text>
-                      <Text fontSize="sm" color="gray.600">
-                        {info.value}
-                      </Text>
+                      {info.label === 'Email' ? (
+                        <a
+                          href="#"
+                          onClick={(ev) => {
+                            ev.preventDefault();
+                            const gmailLink =
+                              'https://mail.google.com/mail/?view=cm&fs=1&to=sandranyambura62@gmail.com';
+                            const opened = window.open(gmailLink, '_blank');
+                            if (!opened) {
+                              window.location.href = 'mailto:sandranyambura62@gmail.com';
+                            }
+                          }}
+                          aria-label="Email Sandra"
+                          style={{ textDecoration: 'none' }}
+                        >
+                          <Text fontSize="sm" color="#8b5cf6" _hover={{ textDecoration: 'underline' }}>
+                            {info.value}
+                          </Text>
+                        </a>
+                      ) : (
+                        <Text fontSize="sm" color="gray.600">{info.value}</Text>
+                      )}
                     </VStack>
                   </VStack>
                 </Box>
@@ -231,7 +270,7 @@ const Contact: React.FC = () => {
                           type="email"
                           value={formData.email}
                           onChange={handleInputChange}
-                          placeholder="your.email@example.com"
+                          placeholder="username@gmail.com"
                           size="lg"
                           bg="gray.50"
                           border="1px"
@@ -388,17 +427,27 @@ const Contact: React.FC = () => {
                       <HStack>
                         <Icon as={FaEnvelope} color="#8b5cf6" />
                         <a
-                          href="mailto:sandra@example.com"
+                          href="#"
+                          onClick={(ev) => {
+                            ev.preventDefault();
+                            const gmailLink =
+                              'https://mail.google.com/mail/?view=cm&fs=1&to=sandranyambura62@gmail.com';
+                            const opened = window.open(gmailLink, '_blank');
+                            if (!opened) {
+                              // fallback to mailto
+                              window.location.href = 'mailto:sandranyambura62@gmail.com';
+                            }
+                          }}
                           style={{ textDecoration: 'none' }}
                         >
                           <Text color="#8b5cf6" _hover={{ textDecoration: "underline" }}>
-                            sandra@example.com
+                            sandranyambura62@gmail.com
                           </Text>
                         </a>
                       </HStack>
                       <HStack>
                         <Icon as={FaPhone} color="green.500" />
-                        <Text color="gray.700">+254 123 456 789</Text>
+                        <Text color="gray.700">+254 715 576095</Text>
                       </HStack>
                       <HStack>
                         <Icon as={FaMapMarkerAlt} color="red.500" />
