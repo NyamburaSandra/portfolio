@@ -104,7 +104,7 @@ const Header: React.FC = () => {
             transition="colors 0.2s"
             fontWeight="medium"
           >
-            Download CV
+            Download Resume
           </Button>
         </Stack>
       </Flex>
@@ -141,7 +141,7 @@ const Header: React.FC = () => {
               fontWeight="medium"
               mt={4}
             >
-              Download CV
+              Download Resume
             </Button>
           </Stack>
         </Box>

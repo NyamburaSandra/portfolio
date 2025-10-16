@@ -57,9 +57,15 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Text color="#8b5cf6" fontWeight="medium" fontSize="lg" mb={4}>
-              Hello, I'm 
-            </Text>
+            <Heading
+              as="h1"
+              size="3xl"
+              color="#8b5cf6"
+              mb={8}
+              fontWeight="medium"
+            >
+              Hello, I'm
+            </Heading>
             <MotionHeading
               as="h1"
               size="3xl"
@@ -105,13 +111,17 @@ const Hero: React.FC = () => {
           >
             <Stack 
               direction={{ base: 'column', sm: 'row' }} 
-              gap={4} 
+              gap={6} 
               justify="center" 
               mb={16}
             >
               <Button
-                colorScheme="blue"
-                size="lg"
+                bg="#8b5cf6"
+                color="white"
+                px={6}
+                py={2}
+                rounded="lg"
+                fontWeight="medium"
                 onClick={scrollToAbout}
                 _hover={{ transform: 'translateY(-2px)' }}
                 transition="all 0.2s"
@@ -123,8 +133,14 @@ const Hero: React.FC = () => {
               </Button>
               <Button
                 variant="outline"
-                colorScheme="blue"
-                size="lg"
+                px={6}
+                py={2}
+                rounded="lg"
+                fontWeight="medium"
+                borderColor="#8b5cf6"
+                color="#8b5cf6"
+                _hover={{ bg: '#f5f3ff', transform: 'translateY(-2px)' }}
+                transition="all 0.2s"
               >
                 Get In Touch
               </Button>

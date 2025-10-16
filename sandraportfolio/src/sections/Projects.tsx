@@ -67,8 +67,8 @@ const Projects: React.FC = () => {
       description: "A responsive portfolio website showcasing modern web design principles and smooth animations. Built with React and Framer Motion.",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
       technologies: ["React", "TypeScript", "Framer Motion", "Chakra UI"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      liveUrl: "https://sandranyambura.netlify.app/",
+      githubUrl: "https://github.com/NyamburaSandra/portfolio",
       category: "web"
     },
     {
