@@ -12,6 +12,9 @@ import {
 import { motion } from 'framer-motion';
 import { FaCode, FaPalette, FaLightbulb, FaHeart } from 'react-icons/fa';
 
+// Import resume so Vite bundles it and we can link to it for download
+import resumePdf from '../assets/SandraNyambura Resume.pdf';
+
 const MotionBox = motion(Box);
 
 const About: React.FC = () => {
@@ -147,18 +150,20 @@ const About: React.FC = () => {
                 </Text>
               </VStack>
 
-              <Button
-                bg="#8b5cf6"
-                color="white"
-                px={6}
-                py={3}
-                rounded="lg"
-                _hover={{ bg: "#8b5cf6" }}
-                transition="all 0.2s"
-                fontWeight="medium"
-              >
-                Download Resume
-              </Button>
+              <a href={resumePdf} download style={{ textDecoration: 'none' }}>
+                <Button
+                  bg="#8b5cf6"
+                  color="white"
+                  px={6}
+                  py={3}
+                  rounded="lg"
+                  _hover={{ bg: "#8b5cf6" }}
+                  transition="all 0.2s"
+                  fontWeight="medium"
+                >
+                  Download My Resume
+                </Button>
+              </a>
             </VStack>
           </MotionBox>
         </SimpleGrid>

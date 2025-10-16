@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from './Logo';
+import resumePdf from '../assets/SandraNyambura Resume.pdf';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,18 +95,20 @@ const Header: React.FC = () => {
               {item.name}
             </Link>
           ))}
-          <Button
-            bg="#8b5cf6"
-            color="white"
-            px={6}
-            py={2}
-            rounded="lg"
-            _hover={{ bg: '#8b5cf6' }}
-            transition="colors 0.2s"
-            fontWeight="medium"
-          >
-            Download Resume
-          </Button>
+          <a href={resumePdf} download style={{ textDecoration: 'none' }}>
+            <Button
+              bg="#8b5cf6"
+              color="white"
+              px={6}
+              py={2}
+              rounded="lg"
+              _hover={{ bg: '#8b5cf6' }}
+              transition="colors 0.2s"
+              fontWeight="medium"
+            >
+              Download Resume
+            </Button>
+          </a>
         </Stack>
       </Flex>
 
@@ -130,19 +133,21 @@ const Header: React.FC = () => {
                 {item.name}
               </Link>
             ))}
-            <Button
-              bg="#8b5cf6"
-              color="white"
-              px={6}
-              py={2}
-              rounded="lg"
-              _hover={{ bg: '#8b5cf6' }}
-              transition="colors 0.2s"
-              fontWeight="medium"
-              mt={4}
-            >
-              Download Resume
-            </Button>
+            <a href={resumePdf} download style={{ textDecoration: 'none' }}>
+              <Button
+                bg="#8b5cf6"
+                color="white"
+                px={6}
+                py={2}
+                rounded="lg"
+                _hover={{ bg: '#8b5cf6' }}
+                transition="colors 0.2s"
+                fontWeight="medium"
+                mt={4}
+              >
+                Download Resume
+              </Button>
+            </a>
           </Stack>
         </Box>
       )}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Nfts from '../assets/Nfts.png';
 import Portfolio from '../assets/Portfolio.png';
 import Edufam from '../assets/Edufam.png';
+import Events from '../assets/Events.png';
 import {
   Box,
   Container,
@@ -76,21 +77,20 @@ const Projects: React.FC = () => {
     },
     {
       id: 4,
-      title: "E movie",
-      description: "Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup.",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-      technologies: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "design",
-      featured: true
+      title: "Task Management",
+      description: "Platform that allowed one to manage tasks efficiently. Tasks are displayed and one can check them when done, edit and delete.",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      technologies: ["React", "Axios", "Bootstrap", "Heroku"],
+      liveUrl: "https://todolist-sandra.netlify.app/todo-list",
+      githubUrl: "https://github.com/NyamburaSandra/TodoList",
+      category: "web",
     },
     {
       id: 5,
-      title: "Weather App",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather information.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      technologies: ["React", "Weather API", "Chart.js"],
+      title: "Events Ticketing System",
+      description: "A ticketing application with a user-friendly interface for selecting events, booking tickets, and managing reservations.",
+      image: Events,
+      technologies: ["React", "Ruby on Rails", "Tailwind CSS"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
       category: "web"
