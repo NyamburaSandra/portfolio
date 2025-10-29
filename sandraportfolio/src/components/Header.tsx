@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from './Logo';
+import resumePdf from '../assets/SandraNyambura Resume.pdf';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,6 +95,7 @@ const Header: React.FC = () => {
               {item.name}
             </Link>
           ))}
+          <a href={resumePdf} download style={{ textDecoration: 'none' }}>
           <Button
             bg="#8b5cf6"
             color="white"
@@ -106,6 +108,7 @@ const Header: React.FC = () => {
           >
             Download Resume
           </Button>
+          </a>
         </Stack>
       </Flex>
 

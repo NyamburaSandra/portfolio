@@ -8,9 +8,13 @@ import {
   VStack,
   Icon,
   Button,
+  Image,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { FaCode, FaPalette, FaLightbulb, FaHeart } from 'react-icons/fa';
+import resumePdf from '../assets/SandraNyambura Resume.pdf';
+// Profile image (place your image file at src/assets/profile.jpg)
+import profileImg from '../assets/portfolio pic.png';
 
 // Resume download temporarily disabled — removed import to avoid unused symbol
 
@@ -85,16 +89,8 @@ const About: React.FC = () => {
                 p={8}
                 mb={8}
               >
-                <Box
-                  w="full"
-                  h="80"
-                  bg="gray.200"
-                  rounded="xl"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <Text fontSize="6xl">👨‍💻</Text>
+                <Box w="full" h="83" rounded="xl" overflow="hidden">
+                  <Image src={profileImg} alt="Profile" w="full" h="full" objectFit="cover" />
                 </Box>
               </Box>
 
@@ -125,7 +121,7 @@ const About: React.FC = () => {
           >
             <VStack align="start" gap={6}>
               <Heading as="h3" size="lg" mb={6}>
-                I'm Sandra Nyambura, a passionate Full Stack Developer
+                I'm a passionate Full Stack Developer
               </Heading>
               
               <VStack align="start" gap={4} color="gray.600">
@@ -148,7 +144,7 @@ const About: React.FC = () => {
                   share my passion for innovation and excellence.
                 </Text>
               </VStack>
-
+              <a href={resumePdf} download style={{ textDecoration: 'none' }}>
               <Button
                           bg="#8b5cf6"
                           color="white"
@@ -161,6 +157,7 @@ const About: React.FC = () => {
                         >
                           Download Resume
                         </Button>
+                        </a>
             </VStack>
           </MotionBox>
         </SimpleGrid>

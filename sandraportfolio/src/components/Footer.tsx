@@ -210,7 +210,7 @@ const Footer: React.FC = () => {
             </HStack>
 
             <HStack gap={4} color="gray.400" fontSize="sm">
-              <Text>&copy; 2024 Sandra Nyambura. All rights reserved.</Text>
+              <Text>&copy; 2025 Sandra Nyambura. All rights reserved.</Text>
               <Button
                 onClick={scrollToTop}
                 variant="ghost"
