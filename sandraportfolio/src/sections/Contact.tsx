@@ -103,8 +103,8 @@ const Contact: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', color: '#333', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', color: '#0077B5', label: 'LinkedIn' },
+    { icon: FaGithub, href: 'https://github.com/NyamburaSandra', color: '#333', label: 'GitHub' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/sandra-nyambura-5656a0213', color: '#0077B5', label: 'LinkedIn' },
     { icon: FaTwitter, href: 'https://twitter.com', color: '#1DA1F2', label: 'Twitter' },
     { icon: FaInstagram, href: 'https://instagram.com', color: '#E4405F', label: 'Instagram' },
   ];

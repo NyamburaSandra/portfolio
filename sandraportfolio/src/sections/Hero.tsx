@@ -11,7 +11,7 @@ import {
   Link,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
 
 const MotionBox = motion(Box);
 const MotionHeading = motion(Heading);
@@ -155,7 +155,7 @@ const Hero: React.FC = () => {
           >
             <HStack gap={6} justify="center">
               <Link
-                href="#"
+                href="https://github.com/NyamburaSandra"
                 aria-label="GitHub"
                 color="gray.700"
                 _hover={{ color: '#8b5cf6', transform: 'translateY(-2px)' }}
@@ -171,7 +171,7 @@ const Hero: React.FC = () => {
                 <FaGithub size={20} />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/sandra-nyambura-5656a0213"
                 aria-label="LinkedIn"
                 color="gray.700"
                 _hover={{ color: '#8b5cf6', transform: 'translateY(-2px)' }}
@@ -185,22 +185,6 @@ const Hero: React.FC = () => {
                 justifyContent="center"
               >
                 <FaLinkedin size={20} />
-              </Link>
-              <Link
-                href="#"
-                aria-label="Email"
-                color="gray.700"
-                _hover={{ color: '#8b5cf6', transform: 'translateY(-2px)' }}
-                transition="all 0.2s"
-                p={3}
-                bg="white"
-                rounded="full"
-                shadow="md"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <FaEnvelope size={20} />
               </Link>
             </HStack>
           </MotionBox>
